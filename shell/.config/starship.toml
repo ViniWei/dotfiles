@@ -1,0 +1,5 @@
+[character]
+success_symbol = '[:!](bold blue)'
+
+[git_status]
+style = 'bold purple'

@@ -10,6 +10,12 @@ Clone the repo with submodules:
 git clone --recurse-submodules git@github.com:ViniWei/dotfiles.git
 ```
 
+Install Starship 
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+
 If you want to use tmux remember to clone tpm:
 
 ```bash

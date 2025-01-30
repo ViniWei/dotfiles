@@ -4,3 +4,7 @@ function p() {
 
 alias n="nvim"
 alias c="clear"
+
+set -o vi
+
+eval "$(starship init bash)"
