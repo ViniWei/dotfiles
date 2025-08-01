@@ -3,7 +3,6 @@ function p() {
 }
 
 alias n="nvim"
-alias c="clear"
 
 set -o vi
 
