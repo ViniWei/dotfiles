@@ -20,12 +20,12 @@ vimcmd_symbol = "[:](green)"
 
 [git_branch]
 format = "[$branch]($style)"
-#style = "yellow"
+style = "bright-yellow"
 
 [git_status]
 format = "[[($conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
 stashed = "≡"
-#style = "bright-yellow"
+style = "yellow"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
