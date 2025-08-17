@@ -1,3 +1,5 @@
+#!/bin/bash/env bash
+
 function p() {
     cd -- "$(. ~/shell/project_finder.sh)" 
 }
