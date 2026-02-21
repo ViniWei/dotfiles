@@ -12,3 +12,7 @@ eval "$(starship init bash)"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+bind -x '"\C-l": clear'
+bind '"\C-p":history-search-backward'
+bind '"\C-n":history-search-forward'
