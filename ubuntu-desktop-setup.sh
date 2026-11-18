@@ -53,6 +53,15 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>Re
 # Super + E opens the home folder in the default file manager
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 
+# GNOME Shell grabs Super + N to focus the active notification, which shadows
+# the browser media key below. Free it and give the shell time to release its
+# grab before asking gsd-media-keys to grab the same combination.
+gsettings set org.gnome.shell.keybindings focus-active-notification '@as []'
+sleep 1
+
+# Super + N opens the system's default browser
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>n']"
+
 # Super + W closes the active window (keep Alt + F4 as well)
 gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4', '<Super>w']"
 
