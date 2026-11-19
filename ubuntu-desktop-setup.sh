@@ -1,10 +1,14 @@
-# sudo apt update
-# sudo apt install pipx
-# pipx install gnome-extensions-cli --system-site-packages
-# pipx ensurepath
-# source ~./bashrc
-# gext install disable-workspace-switcher@jbradaric.me
-# gext install instantworkspaceswitcher@amalantony.net
+sudo apt update
+sudo apt install pipx
+
+snap install obsidian --classic
+
+pipx install gnome-extensions-cli --system-site-packages
+pipx ensurepath
+source ~/.bashrc
+
+gext install disable-workspace-switcher@jbradaric.me
+gext install instantworkspaceswitcher@amalantony.net
 gnome-extensions disable ubuntu-dock@ubuntu.com
 gnome-extensions disable ding@rastersoft.com
 
@@ -46,6 +50,10 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 if gsettings list-schemas | grep -qx 'org.freedesktop.ibus.general.hotkey'; then
 	gsettings set org.freedesktop.ibus.general.hotkey triggers '@as []'
 fi
+
+# Use Ghostty as the system's default terminal application
+gsettings set org.gnome.desktop.default-applications.terminal exec 'ghostty'
+gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
 
 # Super + Enter opens the system's default terminal application
 gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>Return']"
